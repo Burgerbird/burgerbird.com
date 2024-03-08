@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://burgerbird.com/sitemap.xml

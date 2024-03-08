@@ -1,0 +1,87 @@
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  margin: auto;
+  width: var(--container-width);
+  padding: 0 0 var(--bento-margin) var(--bento-margin);
+}
+
+/* GRID */
+
+.grid {
+  position: relative;
+  opacity: 0;
+  /* transition: opacity 2s ease; */
+  width: 100%;
+}
+
+.grid.loaded-images {
+  opacity: 1;
+}
+
+.grid .item {
+  position: absolute;
+  display: block;
+  padding: 0;
+  border-radius: var(--border-radius);
+  margin: var(--bento-margin);
+  overflow: hidden;
+}
+
+.grid .item,
+.grid .item-1-1 {
+  width: var(--item-width);
+  height: var(--item-height);
+  margin: var(--bento-margin);
+}
+
+.grid .item-2-1 {
+  --width: 2;
+  width: calc(var(--bento-base-width) / var(--items) * var(--width) - (var(--width) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--width));
+  height: var(--item-height);
+}
+
+.grid .item-2-2 {
+  --width: 2;
+  width: calc(var(--bento-base-width) / var(--items) * var(--width) - (var(--width) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--width));
+  --height: 2;
+  height: calc(var(--bento-base-width) / var(--items) * var(--height) - (var(--height) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--height));
+}
+
+.grid .item-4-2 {
+  --width: 4;
+  width: calc(var(--bento-base-width) / var(--items) * var(--width) - (var(--width) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--width));
+  --height: 2;
+  height: calc(var(--bento-base-width) / var(--items) * var(--height) - (var(--height) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--height));
+}
+
+.grid .item-4-3 {
+  --width: 4;
+  width: calc(var(--bento-base-width) / var(--items) * var(--width) - (var(--width) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--width));
+  --height: 3;
+  height: calc(var(--bento-base-width) / var(--items) * var(--height) - (var(--height) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--height));
+}
+
+.grid .item-6-3 {
+  --width: 6;
+  width: calc(var(--bento-base-width) / var(--items) * var(--width) - (var(--width) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--width));
+  --height: 3;
+  height: calc(var(--bento-base-width) / var(--items) * var(--height) - (var(--height) / var(--items) * 2 + 2) * var(--bento-margin) - var(--scrollbar-width) / var(--items) * var(--height));
+}
+
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+
+.item.muuri-item-releasing {
+  z-index: 9002;
+}
+
+.item.muuri-item-dragging {
+  z-index: 9003;
+}
+
+.grab {
+  cursor: grab;
+}

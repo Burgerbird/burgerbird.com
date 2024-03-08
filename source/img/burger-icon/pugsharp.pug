@@ -1,0 +1,36 @@
+- var sizesAndFormats = [{'sizes':[100,200,300,400,500,600,700,800],'format':'webp'}] //- Example: [{'sizes':[1000,1150,1200],'format':'jpg'},{'sizes':[1000,1150,1200],'format':'avif'}]
+- var dataSrcSwitch = false //- false / true
+- var loadingLazy = true //- true / false
+
+mixin img(src, altText = '', imgAttributes = {})
+  - var srcBase = src.replace(/-\d+\.(\w+)$/, '').replace(/\.\w+$/, '')
+  - var { sizes } = imgAttributes
+  
+  picture
+    each formatObj in sizesAndFormats
+      - var srcsetContent = formatObj.sizes.map(size => `${srcBase}-${size}.${formatObj.format} ${size}w`).join(', ')
+      if dataSrcSwitch
+        if sizes
+          source(data-srcset=srcsetContent type=`image/${formatObj.format}` sizes=sizes)
+        else
+          source(data-srcset=srcsetContent type=`image/${formatObj.format}`)
+      else
+        if sizes
+          source(srcset=srcsetContent type=`image/${formatObj.format}` sizes=sizes)
+        else
+          source(srcset=srcsetContent type=`image/${formatObj.format}`)
+    if dataSrcSwitch
+      if loadingLazy
+        img(data-src=src alt=altText loading='lazy')&attributes(imgAttributes)
+      else
+        img(data-src=src alt=altText)&attributes(imgAttributes)
+    else
+      if loadingLazy
+        img(src=src alt=altText loading='lazy')&attributes(imgAttributes)
+      else
+        img(src=src alt=altText)&attributes(imgAttributes)
+
+//- Example usage:
+//- Include this pugsharp.pug, then:
+//- +img('path/to/image-1200.jpg', 'A descriptive alt text')
+

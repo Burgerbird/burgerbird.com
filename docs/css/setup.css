@@ -1,0 +1,1 @@
+*{box-sizing:border-box;margin:0;padding:0}a,a:active,a:focus,a:hover,a:visited{color:inherit;text-decoration:none}body{background:var(--page-background-color);color:var(--bento-white);display:flex;flex-direction:column;font-family:Silkscreen,Open Sans,sans-serif;min-height:100lvh;overflow-x:hidden;overflow-y:scroll}

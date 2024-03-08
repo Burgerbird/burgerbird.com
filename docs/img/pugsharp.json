@@ -1,0 +1,118 @@
+[
+    {
+        "img": "burgerbird-logo.png",
+        "format": ["avif","webp"],
+        "from": 150,
+        "to": 750,
+        "step": 50,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "doughnut001.png",
+        "format": ["avif","webp"],
+        "from": 150,
+        "to": 750,
+        "step": 50,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "first-burgerbird.png",
+        "format": ["avif","webp"],
+        "from": 300,
+        "to": 1500,
+        "step": 100,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "burgerbird-city.jpg",
+        "format": ["avif","webp"],
+        "from": 300,
+        "to": 1500,
+        "step": 100,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "sugar-mountains.jpg",
+        "format": ["avif","webp"],
+        "from": 300,
+        "to": 1500,
+        "step": 100,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "space-burgerbird.jpg",
+        "format": ["avif","webp"],
+        "from": 300,
+        "to": 1500,
+        "step": 100,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "burgerbird-unity.png",
+        "format": ["avif","webp"],
+        "from": 300,
+        "to": 1500,
+        "step": 100,
+        "sharp-avif": {
+            "quality": 80,
+            "effort": 9
+        },
+        "sharp-webp": {
+            "quality": 95,
+            "effort": 6
+        }
+    },
+    {
+        "img": "burgerbird-cake.png",
+        "format": ["webp"],
+        "from": 600,
+        "to": 2000,
+        "step": 600,
+        "sharp-webp": {
+            "quality": 90,
+            "effort": 6
+        }
+    }
+]

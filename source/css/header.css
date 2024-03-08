@@ -1,0 +1,186 @@
+/* HEADER BAR */
+
+header {
+  font-family: Barrio, Silkscreen, 'Open Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 6000;
+  width: 100%;
+}
+
+header .menu-bar {
+  background-color: var(--page-background-color);
+  padding-top: calc(var(--bento-margin) * 1.35 * var(--menu-scroll) + var(--bento-margin) * 0.25);
+  padding-right: calc(var(--bento-margin) * 2);
+  padding-bottom: calc(var(--bento-margin) * 1.25 * var(--menu-scroll));
+  padding-left: calc(var(--bento-margin) * 2 - 1px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* iOS Sticky Header Glitch Fix */
+  box-shadow: 0px -2px 2px var(--bento-black);
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* FADE-IN ANIMATION */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation-duration: 1500ms;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+}
+
+/* LOGO */
+
+header h1 {
+  font-size: var(--header-font-size);
+  line-height: 1;
+  color: var(--header-elements-color);
+}
+
+/* BURGER BUTTON */
+
+#burger-icon {
+  display: flex;
+  flex-direction: column;
+  --burger-width: calc(var(--header-font-size) * 0.85);
+  --width: var(--burger-width);
+  cursor: pointer;
+}
+
+.rect {
+  background: var(--header-elements-color);
+  display: inline-block;
+  height: calc(var(--width) / 6);
+  margin: calc(var(--width) / 20) 0;
+  transition: transform 500ms ease;
+  width: var(--width);
+  border-radius: calc(var(--width) / 6 / 3);
+}
+
+.rect:nth-child(1) {
+  height: calc(var(--width) / 3);
+  border-top-right-radius:  calc(var(--width) / 3);
+  border-top-left-radius:  calc(var(--width) / 3);
+}
+
+.rect:nth-child(3) {
+  height: calc(var(--width) / 5);
+  border-bottom-right-radius:  calc(var(--width) / 6 );
+  border-bottom-left-radius:  calc(var(--width) / 6 );
+}
+
+/* ACTIVE BURGER BUTTON */
+
+#burger-icon.active .rect:nth-child(1) {
+  transform: rotate(5deg) translateY(-70px);
+  transition-delay: 20ms;
+}
+
+#burger-icon.active .rect:nth-child(2) {
+  transform: translateY(calc(-1 * var(--width) / 12)) rotate(315deg);
+}
+
+#burger-icon.active .rect:nth-child(3) {
+  transform: translateY(calc(-1 * var(--width) / 4  - var(--width) / 12)) rotate(-315deg);
+  height: calc(var(--width) / 6);
+  border-radius: calc(var(--width) / 6 / 3);
+  /* transition-delay: 100ms; */
+}
+
+/* SLIDE-IN MENU */
+
+.menu-overlay {
+  visibility: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--bento-black);
+  z-index: 500;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 500ms ease, visibility 0s 500ms;
+}
+
+.slide-menu {
+  position: fixed;
+  padding: 200px 20px 20px;
+  right: 0;
+  top: 0;
+  width: 35vw;
+  height: 100vh;
+  background-color: var(--bento-black);
+  color: var(--bento-white);
+  z-index: 1000;
+  /* Start off-screen */
+  transform: translateX(100%);
+  /* Animate the transform property */
+  transition: transform 500ms ease;
+}
+
+.slide-menu.active {
+  transform: translateX(0);
+}
+
+.menu-overlay.active {
+  visibility: visible;
+  opacity: 0.7;
+  transition-delay: 0s;
+}
+
+/* SVG BORDER RADIUS BAR */
+
+header .svg-bar {
+  height: var(--border-radius);
+  margin-bottom: calc(-1 * (var(--border-radius) + var(--bento-margin)));
+  position: relative;
+  pointer-events: none;
+  width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+svg.radius {
+  position: absolute;
+  /* iOS Glitch Fix */
+  top: -2px;
+}
+
+svg.radius.left {
+  left: 0;
+}
+
+svg.radius.right {
+  right: 0;
+}
+
+svg.radius>rect {
+  fill: var(--page-background-color);
+}
+
+svg.radius,
+svg.radius rect {
+  width: calc(var(--bento-margin) * 2 + var(--border-radius));
+  height: calc(var(--border-radius) + 2px);
+}
+
+svg.radius.left circle {
+  cx: calc(var(--bento-margin) * 2 + var(--border-radius));
+  cy: calc(var(--border-radius) + 2px);
+  r: calc(var(--border-radius));
+}
+
+svg.radius.right circle {
+  cx: 0;
+  cy: calc(var(--border-radius) + 2px);
+  r: calc(var(--border-radius));
+}

@@ -1,0 +1,10 @@
+mixin generateImages(srcPath, srcPath, totalImages)
+    - for (var i = 1; i <= totalImages; i++)
+        - var srcImageName = `${srcPath}-${('00000' + i).slice(-5)}`;
+        .swiper-slide
+            img(src=`${srcImageName}-200.webp` width="200" height="200" srcset=`${srcImageName}-800.webp 2x, ${srcImageName}-400.webp 1x` alt="Burgerbird Action Figure" loading="lazy").swiper-gl-image
+            .swiper-lazy-preloader.swiper-lazy-preloader-white
+//-  img(src='/img/src/action/burgerbird-action-figure-00023.webp' width='1024' height='1024' srcset='/img/src/action-sizes/burgerbird-action-figure-00023-800.webp 800w, /img/src/action-sizes/burgerbird-action-figure-00023-400.webp 400w, /img/src/action-sizes/burgerbird-action-figure-00023-200.webp 200w')
+.swiper.action-swiper
+    .swiper-wrapper
+        +generateImages('/img/src/action/burgerbird-action-figure', '/img/src/action-sizes/burgerbird-action-figure', 36)

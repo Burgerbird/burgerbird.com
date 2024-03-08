@@ -1,0 +1,22 @@
+/* SCROLLBAR */
+
+/* For WebKit browsers like Chrome, Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bento-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bento-gray);
+  border-radius: 10px;
+  border: 3px solid var(--bento-black);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bento-gray) var(--bento-black);
+}

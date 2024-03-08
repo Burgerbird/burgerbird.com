@@ -1,0 +1,67 @@
+.grid .item-content.color-columns {
+    display: flex;
+}
+
+.item-content.color-columns > div {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* Text Effect */
+
+.light {
+    text-shadow: -1px -1px 0 hsl(var(--hsl-hue) 100% 50%), 1px -1px 0 hsl(var(--hsl-hue) 100% 50%), -1px 1px 0 hsl(var(--hsl-hue) 100% 50%), 1px 1px 0 hsl(var(--hsl-hue) 100% 50%);
+}
+
+.dark {
+    text-shadow: -1px -1px 1 hsl(var(--hsl-hue) 100% 50%), 1px -1px 1 hsl(var(--hsl-hue) 100% 50%), -1px 1px 1 hsl(var(--hsl-hue) 100% 50%), 1px 1px 1 hsl(var(--hsl-hue) 100% 50%);
+}
+
+/* Light Gradients */
+
+.color.light > div:nth-child(1), .color.light > div:nth-child(1)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 50%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 50% )";
+}
+
+.color.light > div:nth-child(2), .color.light > div:nth-child(2)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 60%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 70%)";
+}
+
+.color.light > div:nth-child(3), .color.light > div:nth-child(3)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 70%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 80%)";
+}
+
+.color.light > div:nth-child(4), .color.light > div:nth-child(4)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 80%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 90%)";
+}
+
+/* Dark Gradients */
+
+.color.dark > div:nth-child(1), .color.dark > div:nth-child(1)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 50%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 50%)";
+}
+
+.color.dark > div:nth-child(2), .color.dark > div:nth-child(2)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 40%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 40%)";
+}
+
+.color.dark > div:nth-child(3), .color.dark > div:nth-child(3)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 30%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 30%)";
+}
+
+.color.dark > div:nth-child(4), .color.dark > div:nth-child(4)::after {
+    background-color: hsl(var(--hsl-hue) var(--hsl-saturation) 20%);
+    content: "hsl(" var(--hsl-hue-string) var(--hsl-saturation-string)" 20%)";
+}

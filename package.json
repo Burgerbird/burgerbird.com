@@ -1,0 +1,56 @@
+{
+  "name": "burgerbird.com",
+  "version": "2.0.0",
+  "description": "Burgerbird.com Website & Builder",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Burgerbird/burgerbird.com.git"
+  },
+  "engines": {
+    "node": "^20.0.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=build node scripts/build.js",
+    "build:css": "node scripts/build-css.js",
+    "build:html": "node scripts/build-html.js",
+    "build:js": "node scripts/build-js.js",
+    "build:purgecss": "node scripts/build-purgecss.js",
+    "start": "node scripts/start.js",
+    "start:copy": "node scripts/start-copy.js",
+    "pug": "node scripts/pug.mjs",
+    "markdown": "node scripts/common-markdown.js",
+    "pwa-asset-generator": "node scripts/common-pwa-asset-generator.js",
+    "sitemap": "node scripts/common-sitemap.js",
+    "postinstall": "npm run start:copy"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "muuri": "^0.9.5",
+    "swiper": "^11.0.7",
+    "vanilla-lazyload": "^17.8.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "browser-sync": "^3.0.2",
+    "chalk": "~5.3.0",
+    "cssnano": "^6.1.0",
+    "figlet": "^1.7.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "html-minifier-terser": "^7.2.0",
+    "jsdom": "^23.2.0",
+    "liquidjs": "^10.10.1",
+    "markdown-it": "^13.0.2",
+    "postcss": "^8.4.35",
+    "postcss-import": "^16.0.1",
+    "pug": "^3.0.2",
+    "purgecss": "~4.1.3",
+    "pwa-asset-generator": "^6.3.1",
+    "sharp": "^0.33.2",
+    "simple-git": "^3.22.0",
+    "sitemap": "^7.1.1",
+    "terser": "^5.29.1",
+    "xml-formatter": "^3.6.2"
+  }
+}

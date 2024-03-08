@@ -1,0 +1,29 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Body */
+
+body {
+  background: var(--page-background-color);
+  font-family: Silkscreen, 'Open Sans', sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: var(--bento-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100lvh;
+}

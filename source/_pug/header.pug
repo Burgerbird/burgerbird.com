@@ -1,0 +1,21 @@
+header
+    .menu-bar
+        h1.fade-in
+            a.trigger-page-fade-out(href='/') Burgerbird
+        .fade-in#burger-icon(onclick='toggleMenu()')
+            .rect
+            .rect
+            .rect
+    .svg-bar
+        svg.radius.left(width='0' height='0' xmlns='http://www.w3.org/2000/svg')
+            defs
+                mask#maskShape1
+                    rect(width='0' height='0' fill='white')
+                    circle(cx='0' cy='0' r='0' fill='black')
+            rect(width='0' height='0' fill='' mask='url(#maskShape1)')
+        svg.radius.right(width='0' height='0' xmlns='http://www.w3.org/2000/svg')
+            defs
+                mask#maskShape2
+                    rect(width='0' height='0' fill='white')
+                    circle(cx='0' cy='0' r='0' fill='black')
+            rect(width='0' height='0' fill='' mask='url(#maskShape2)')

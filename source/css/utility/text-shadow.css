@@ -1,0 +1,19 @@
+
+.text-shadow {
+    --shadow-color: var(--burgerbird-blue-20);
+    --shadow-size: calc(var(--bento-margin) * 0.3);
+    --shadow-size-1: var(--shadow-size);
+    --shadow-size-2: var(--shadow-size);
+    --shadow-size-3: var(--shadow-size);
+    --shadow-size-4: var(--shadow-size);
+    text-shadow:
+      calc(-1 * var(--shadow-size-1)) calc(-1 * var(--shadow-size-1)) 0 var(--shadow-color),
+      var(--shadow-size-2) calc(-1 * var(--shadow-size-2)) 0 var(--shadow-color),
+      calc(-1 * var(--shadow-size-3)) var(--shadow-size-4) 0 var(--shadow-color), 
+      var(--shadow-size-4) var(--shadow-size-4) 0 var(--shadow-color);
+  }
+  
+  .text-shadow-1 {
+    --shadow-color: var(--burgerbird-blue-30);
+    --shadow-size-1: calc(var(--shadow-size) * 2);
+  }

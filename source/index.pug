@@ -1,0 +1,95 @@
+doctype html
+html(lang="en")
+    include /_pug/head.pug
+    body
+        include /_pug/preloader.pug
+        include /_pug/header.pug
+        include /_pug/slide-menu.pug
+        main.container
+            .grid#grid
+                include /_pug/items/hero-text.pug
+                -var itemSizes01 = '(max-width: 600px) 20vw, (max-width: 1200px) 12vw, (max-width: 2000px) 7.8vw, 312px'
+                -var itemSizes02 = '(max-width: 600px) 45vw, (max-width: 1200px) 29vw, (max-width: 2000px) 17.6vw, 704px'
+                -var itemSizes04 = '(max-width: 600px) 94vw, (max-width: 1200px) 61vw, (max-width: 2000px) 37vw, 1484px'
+                -var itemSizes06 = '(max-width: 1200px) 94vw, (max-width: 2000px) 57vw, 2280px'
+                        
+                .item.item-4-3.grab
+                    .item-content.hero-image
+                        include /img/first-burgerbird/pugsharp.pug
+                        +img('/img/first-burgerbird/first-burgerbird-300.webp', 'First Burgerbird', {sizes:itemSizes04, width:'2048', height:'1536', loading:'eager'})  
+
+                //- .item.item-4-2
+                //-     .item-content
+                //-         img(src='/img/src/burger-joint.webp' width='1456' height='816' srcset='/img/sizes/burger-joint-800.webp 800w, /img/sizes/burger-joint-400.webp 400w, /img/sizes/burger-joint-200.webp 200w')
+                        
+                //- .item
+                //-     .item-content.burger-icon
+                //-         include /img/burger-icon/pugsharp.pug
+                //-         +img('/img/burger-icon/burger-icon-100.webp', 'Burger Icon', {sizes:itemSizes01})
+                
+                .item.item-2-2.grab
+                    .item-content.higher
+                        include /img/burgerbird-logo/pugsharp.pug
+                        +img('/img/burgerbird-logo/burgerbird-logo-150.webp', 'First Burgerbird Logo', {sizes:itemSizes02, width:'1000', height:'1000'})  
+
+                //- .item
+                //-     .item-content.burgerbird-hero
+                //-         img(src='/img/src/hero-burgerbird.png' width='300' height='225' srcset='/img/sizes/hero-burgerbird-400.webp 400w, /img/sizes/hero-burgerbird-200.webp 200w, /img/sizes/hero-burgerbird-100.webp 100w')
+                        
+                //- .item.item-4-3
+                //-     .item-content.game-iframe
+                //-         .game-iframe-header 👾 PixiJS Experiment
+                //-         iframe(src="https://burgerbird.com" loading="lazy" frameborder="0") 
+                        
+                .item.item-4-2.grab
+                    .item-content.burgerbird-city                      
+                        include /img/burgerbird-city/pugsharp.pug
+                        +img('/img/burgerbird-city/burgerbird-city-300.webp', 'Burgerbird City', {sizes:itemSizes04, width:'3391', height:'1610'})  
+
+                //- .item.item-2-2
+                //-     .item-content.action-swiper-container
+                //-         include /_pug/parts/swiper/action-swiper.pug
+                        
+                //- .item
+                //-     .item-content.burger3d
+                //-         img(src='/img/src/burger-3d.png' width='1680' height='1440' srcset='/img/sizes/burger-3d-400.webp 400w, /img/sizes/burger-3d-200.webp 200w, /img/sizes/burger-3d-100.webp 100w')
+                        
+                .item.item-4-2
+                    .item-content.video-item
+                        video(controls loading="lazy" poster="/img/burgerbird-unity/burgerbird-unity-700.webp")
+                            source(src="/img/video/burgerbird-unity.mp4" type="video/mp4") 
+                        .video-info.grab
+                            | ★ 2017 Testflight
+                            | Flappy Bird Clone 
+                        
+                //- .item.item-2-2
+                //-     .item-content
+                //-         img(src='/img/src/year-of-the-burgerbird-2024-1.jpeg' width='1024' height='1024' srcset='/img/sizes/year-of-the-burgerbird-2024-1-800.webp 800w, /img/sizes/year-of-the-burgerbird-2024-1-400.webp 400w, /img/sizes/year-of-the-burgerbird-2024-1-200.webp 200w')
+                        
+                //- .item
+                //-     .item-content.burgerbird3
+                //-         img(src='/img/src/Burgerbird3.png' width='1520' height='1520' srcset='/img/sizes/Burgerbird3-400.webp 400w, /img/sizes/Burgerbird3-200.webp 200w, /img/sizes/Burgerbird3-100.webp 100w')
+
+                //- .item
+                //-     .item-content.pickle
+                //-         img(src='/img/src/pickle-slice.png' width='420' height='420' srcset='/img/sizes/pickle-slice-400.webp 400w, /img/sizes/pickle-slice-200.webp 200w, /img/sizes/pickle-slice-100.webp 100w')
+                   
+                .item.item-4-2.grab
+                    .item-content.higher
+                        include /img/sugar-mountains/pugsharp.pug
+                        +img('/img/sugar-mountains/sugar-mountains-300.webp', 'Sugar Mountains', {sizes:itemSizes04, width:'1720', height:'680'})  
+
+                .item.item-2-2.grab
+                    .item-content.border-white.doughnut
+                        include /img/doughnut001/pugsharp.pug
+                        +img('/img/doughnut001/doughnut001-150.webp', 'First Doughnut', {sizes:itemSizes02, id:'doughnut', width:'1000', height:'1000'})   
+
+                .item.item-4-2.grab
+                    .item-content
+                        include /img/space-burgerbird/pugsharp.pug
+                        +img('/img/space-burgerbird/space-burgerbird-300.webp', 'Space Burgrbird', {sizes:itemSizes04, width:'1513', height:'767'})  
+
+        include /_pug/footer.pug
+        //- script(src='/js/vendor/swiper.js' defer)
+        //- script(src='/js/vendor/swiper-gl.js' defer)
+        //- script(src='/js/action-swiper.js' type="module" defer) 
