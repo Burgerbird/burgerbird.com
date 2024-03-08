@@ -42,9 +42,9 @@ Thank you for considering contributing to the Burgerbird.com Website. Every cont
 ## License and Brand Use
 
 ### Code License
-The source code for Burgerbird.com Website Builder is licensed under the [European Union Public License 1.2 (EUPL 1.2)](https://joinup.ec.europa.eu/collection/eupl/eupl-text-11-12). Please refer to the LICENSE file in the repository for the full license text.
+The source code for Burgerbird.com Website Builder is licensed under the MIT license. 
 
 ### Brand and Image Use
-While the source code is open for modification and redistribution under the EUPL 1.2, the Burgerbird brand and visual identity are not included in this license.
+While the source code is open for modification and redistribution under the MIT license, the Burgerbird brand and visual identity are not included in this license.
 
 Any images provided in the repository or associated with the Burgerbird.com Website are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). This means you can share and adapt these images non-commercially, as long as you provide attribution and distribute your contributions under the same license.
