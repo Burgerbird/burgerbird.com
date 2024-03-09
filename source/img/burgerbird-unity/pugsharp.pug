@@ -5,6 +5,8 @@
 mixin img(src, altText = '', imgAttributes = {})
   - var srcBase = src.replace(/-\d+\.(\w+)$/, '').replace(/\.\w+$/, '')
   - var { sizes } = imgAttributes
+  - var { sizes, ...restImgAttributes } = imgAttributes
+
   
   picture
     each formatObj in sizesAndFormats
@@ -21,14 +23,14 @@ mixin img(src, altText = '', imgAttributes = {})
           source(srcset=srcsetContent type=`image/${formatObj.format}`)
     if dataSrcSwitch
       if loadingLazy
-        img(data-src=src alt=altText loading='lazy')&attributes(imgAttributes)
+        img(data-src=src alt=altText loading='lazy')&attributes(restImgAttributes)
       else
-        img(data-src=src alt=altText)&attributes(imgAttributes)
+        img(data-src=src alt=altText)&attributes(restImgAttributes)
     else
       if loadingLazy
-        img(src=src alt=altText loading='lazy')&attributes(imgAttributes)
+        img(src=src alt=altText loading='lazy')&attributes(restImgAttributes)
       else
-        img(src=src alt=altText)&attributes(imgAttributes)
+        img(src=src alt=altText)&attributes(restImgAttributes)
 
 //- Example usage:
 //- Include this pugsharp.pug, then:
