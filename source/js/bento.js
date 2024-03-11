@@ -42,7 +42,12 @@ function setupEventListeners() {
   // setupSearchFilter();
   fadeOutLink('.trigger-page-fade-out', '.container', '200');
   scrollMenuMultiplier();
-  window.addEventListener('resize', updateScrollbarWidthVariable);
+  window.addEventListener('resize', onResize);
+}
+
+function onResize() {
+  updateScrollbarWidthVariable;
+  grid.refreshItems();
 }
 
 // Handles category filtering through navigation links.
